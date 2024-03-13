@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="en"> 
+<html lang="en" id="html"> 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HTTP Cat-Code</title>
+    <title>Cat Facts</title>
     <script src="https://http.cat/[status_code]"></script>
+    <link rel="styleheet" href="style.css">
+
 </head>
 <body>
-    <div class="h-screen flex flex-col align-items-center p-16 gap-8">
-        <h1 class="text-center text-4xl font-bold">HTTP Cat-Code</h1>
+
+    <div id="information" class="h-screen flex flex-col align-items-center p-16 gap-8">
+        <h1 id="title" class="text-center text-4xl font-bold">Cat Facts</h1>
         <div class="">
-            <button id="getCodebtn" class="bg-pink-800 text-white rounded-md px-3 py-2 hover:bg-pink-700" style='background-color:SlateBlue'>Get Code</button>
+            <button id="getCodebtn" class="bg-pink-800 text-white rounded-md px-3 py-2 hover:bg-pink-700">Get Facts</button>
         </div>
         <div id="codeContainer" class=""></div>
     </div>
@@ -38,5 +41,5 @@
 
 
 </body>
-
+<script src="code\script.js" type="module" ></script>
 </html>
