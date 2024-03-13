@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en"> 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTTP Cat-Code</title>
+    <script src="https://http.cat/[status_code]"></script>
+</head>
+<body>
+    <div class="h-screen flex flex-col align-items-center p-16 gap-8">
+        <h1 class="text-center text-4xl font-bold">HTTP Cat-Code</h1>
+        <div class="">
+            <button id="getCodebtn" class="bg-pink-800 text-white rounded-md px-3 py-2 hover:bg-pink-700" style='background-color:SlateBlue'>Get Code</button>
+        </div>
+        <div id="codeContainer" class=""></div>
+    </div>
+    <script>
+        const getCodebtn = document.getElementById('getCodebtn');
+        const codeContainer = document.getElementById('codeContainer');
+
+        getCodebtn.addEventListener('click', async () => {
+            try {
+                const response = await fetch('https://meowfacts.herokuapp.com/');
+                if (!response.ok) {
+                    throw new Error('HTTP error! status: ${response.status}');
+                }
+                const data = await response.json();
+                codeContainer.innerText = data.data;
+
+            } catch (error) {
+                console.error('Error fetching cat code:', error)
+                codeContainer.innerText = 'Error fetching cat code. Pleasy try again!'
+            }
+        });
+
+    </script>
+
+
+
+</body>
+
+</html>
