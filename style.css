@@ -1,34 +1,33 @@
-/* Resetting default margin and padding */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/* Setting background color */
+
 body {
-    background-color: #f0f0f0; /* Light gray */
+    background-color: #f0f0f0;
 }
 
-/* Centering content vertically and horizontally */
+
 #information {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh; /* Full viewport height */
+    height: 100vh;
 }
 
-/* Styling the title */
 #title {
     font-size: 2.5rem;
-    color: #333; /* Dark gray */
+    color: #333;
 }
 
-/* Styling the button */
+
 #getCodebtn {
-    background-color: #ff69b4; /* Hot pink */
-    color: #fff; /* White */
+    background-color: #ff69b4; 
+    color: #fff; 
     border: none;
     border-radius: 5px;
     padding: 10px 20px;
@@ -38,13 +37,13 @@ body {
 }
 
 #getCodebtn:hover {
-    background-color: #d94086; /* Darker pink on hover */
+    background-color: #d94086; 
 }
 
-/* Styling the code container */
+
 #codeContainer {
     margin-top: 20px;
     font-size: 1.2rem;
-    color: #333; /* Dark gray */
+    color: #333; 
     text-align: center;
 }
